@@ -1,0 +1,78 @@
+{
+    "position": "top",
+    "layer": "top",
+    "height": 38,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "modules-left": ["hyprland/workspaces"],
+    // "modules-center": ["cpu", "memory"],
+    "modules-right": ["tray", "network", "clock"],
+    // Modules configuration
+	"clock": {
+		"format": " {:%H:%M}",
+		"tooltip": "true",
+        	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        	"format-alt": " {:%d/%m}"
+	},
+	
+	"hyprland/workspaces": {
+        "active-only": true,
+        "all-outputs": true,
+		"format": "{icon}",
+		"format-icons": {
+			// "1": "1",
+			// "2": "2",
+			// "3": "3",
+			// "4": "4",
+			// "5": "5",
+			"urgent": "",
+			"active": "",
+			"default": "󰧞",
+    "sort-by-number": true
+    },
+
+  "memory": {
+    "format": "󰍛 {}%",
+    "format-alt": "󰍛 {used}/{total} GiB",
+    "interval": 5
+  },
+
+  "cpu": {
+    "format": "󰻠 {usage}%",
+    "format-alt": "󰻠 {avg_frequency} GHz",
+    "interval": 5
+  },
+
+  "disk": {
+    "format": "󰋊 {}%",
+    "format-alt": "󰋊 {used}/{total} GiB",
+    "interval": 5,
+    "path": "/mnt/Datos"
+  },
+	
+	"network": {
+        	"format-wifi": "󰤨",
+        	"format-ethernet": " ",
+        	"format-linked": " {ifname} (No IP)",
+        	"format-disconnected": "󰤭",
+        	"format-alt": " {ifname}: {ipaddr}/{cidr}",
+          "tooltip-format": "{essid}",
+          "on-click-right": "nm-connection-editor"
+	},
+
+	"tray": {
+		"icon-size": 16,
+		"spacing": 5
+	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+        	"format-muted": "󰝟",
+		"format-icons": {
+			"default": ["󰕿", "󰖀", "󰕾"]
+		}
+    },
+}
+}
